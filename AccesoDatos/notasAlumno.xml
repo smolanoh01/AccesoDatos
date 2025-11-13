@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alumnos>
+  <alumno>
+    <numExpediente>1</numExpediente>
+    <nombreAlumno>Daniel</nombreAlumno>
+    <nota>8.7</nota>
+  </alumno>
+  <alumno>
+    <numExpediente>12</numExpediente>
+    <nombreAlumno>Sergio</nombreAlumno>
+    <nota>4.5</nota>
+  </alumno>
+</alumnos>

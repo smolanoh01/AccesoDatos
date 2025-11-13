@@ -1,0 +1,33 @@
+package Tema1;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Ej_Escribir {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Validamos si existe el fichero
+		String nombreFichero = "/home/diurno/Escritorio/EjFichero";
+		File fichero = new File(nombreFichero);
+		if (fichero.exists())
+			System.out.println("El fichero " + nombreFichero + " ya existe");
+		else {
+			try {
+				BufferedWriter bw = new BufferedWriter(new FileWriter(nombreFichero));
+				// Escribimos 10 filas
+				for (int x = 0; x < 10; x++) {
+					bw.write("Fila numero " + x + "\n");
+				}
+				bw.close();
+			} catch (IOException ioe) {
+				ioe.printStackTrace();
+			}
+		}
+
+	}
+
+}

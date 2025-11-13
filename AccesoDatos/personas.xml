@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<personas>
+  <persona>
+    <dni>12345678A</dni>
+    <telefono>612334558</telefono>
+    <email>juanp@gmail.com</email>
+  </persona>
+   <persona>
+    <dni>23456789B</dni>
+    <telefono>666222333</telefono>
+    <email>mariap@gmail.com</email>
+  </persona>
+   <persona>
+    <dni>34567890C</dni>
+    <telefono>662598771</telefono>
+    <email>anag@gmail.com</email>
+  </persona>
+</personas>
