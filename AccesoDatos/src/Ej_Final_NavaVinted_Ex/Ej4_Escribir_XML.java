@@ -17,8 +17,7 @@ public class Ej4_Escribir_XML {
 		// Leer archivo y almacenar en un objeto
 		ObjectInputStream ois1;
 		try {
-			ois1 = new ObjectInputStream(
-					new FileInputStream("C:\\Users\\itsca\\git\\AccesoDatos\\AccesoDatos\\ropa.dat"));
+			ois1 = new ObjectInputStream(new FileInputStream("ropa.dat"));
 			Productos lista = (Productos) ois1.readObject();
 			ois1.close();
 
@@ -29,11 +28,14 @@ public class Ej4_Escribir_XML {
 				// Crear contexto JAXB
 				JAXBContext jaxbContext = JAXBContext.newInstance(Productos.class);
 				Marshaller marshaller = jaxbContext.createMarshaller();
+
 				// Configuración opcional para formato legible
 				marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+
 				// Convertir objeto a XML y mostrar en consola
 				marshaller.marshal(lista, System.out);
-				marshaller.marshal(lista, new File("C:\\Users\\itsca\\git\\AccesoDatos\\AccesoDatos\\ropa.xml"));
+				//Guardar en fichero xml
+				marshaller.marshal(lista, new File("ropa.xml"));
 			} catch (JAXBException e) {
 				e.printStackTrace();
 			}

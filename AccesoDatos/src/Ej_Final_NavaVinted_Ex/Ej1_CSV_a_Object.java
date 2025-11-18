@@ -16,8 +16,7 @@ public class Ej1_CSV_a_Object {
 
 		try {
 			// Abrir fichero CSV
-			BufferedReader bf = new BufferedReader(
-					new FileReader("C:\\Users\\itsca\\git\\AccesoDatos\\AccesoDatos\\ropa.csv"));
+			BufferedReader bf = new BufferedReader(new FileReader("ropa.csv"));
 
 			// Variable para lectura
 			String linea;
@@ -46,7 +45,7 @@ public class Ej1_CSV_a_Object {
 			ListaP.mostrarProductos();
 
 			// Guardamos la lista en un fichero binario
-			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:\\Users\\itsca\\git\\AccesoDatos\\AccesoDatos\\ropa.dat", true));
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("ropa.dat", true));
 			oos.writeObject(ListaP);
 			oos.close();
 

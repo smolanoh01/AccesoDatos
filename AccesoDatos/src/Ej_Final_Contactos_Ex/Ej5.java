@@ -42,36 +42,7 @@ public class Ej5 {
 				archivo.writeInt(p.getTelefono());
 			}
 
-			//Ej 6 
-			System.out.println("Introduce el dni que desea buscar: ");
-
-			String dni = teclado.nextLine();
-
-			try {
-				archivo.seek(0);
-				while (true) {
-
-					// Leer dni
-					byte[] dniBytes = new byte[9];
-					archivo.read(dniBytes);
-					String dni2 = new String(dniBytes);
-					dni2.trim();
-
-					if (dni.equals(dni2)) {
-
-						int tlf = archivo.readInt();
-						System.out.println("Telefono: " + tlf);
-						break;
-
-					} else {
-
-						archivo.skipBytes(4);
-					}
-				}
-
-			} catch (EOFException e) {
-				// TODO: handle exception
-			}
+			
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

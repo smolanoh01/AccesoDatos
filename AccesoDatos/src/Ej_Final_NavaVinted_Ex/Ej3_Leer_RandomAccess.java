@@ -16,8 +16,8 @@ public class Ej3_Leer_RandomAccess {
 		int id = Integer.parseInt(teclado.nextLine());
 
 		try {
-			RandomAccessFile archivo = new RandomAccessFile(
-					"C:\\Users\\itsca\\git\\AccesoDatos\\AccesoDatos\\precio.dat", "rw");
+			//Abrimos el archivo binario
+			RandomAccessFile archivo = new RandomAccessFile("precio.dat", "rw");
 
 			try {
 

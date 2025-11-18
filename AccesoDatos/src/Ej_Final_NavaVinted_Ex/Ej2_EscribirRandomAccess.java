@@ -14,8 +14,7 @@ public class Ej2_EscribirRandomAccess {
 		ObjectInputStream ois1;
 		try {
 			// Leer archivo y almacenar en un objeto
-			ois1 = new ObjectInputStream(
-					new FileInputStream("C:\\Users\\itsca\\git\\AccesoDatos\\AccesoDatos\\ropa.dat"));
+			ois1 = new ObjectInputStream(new FileInputStream("ropa.dat"));
 			Productos lista = (Productos) ois1.readObject();
 			ois1.close();
 
@@ -23,7 +22,7 @@ public class Ej2_EscribirRandomAccess {
 			lista.mostrarProductos();
 			
 			//Crear archivo para escribir
-			RandomAccessFile archivo = new RandomAccessFile("C:\\Users\\itsca\\git\\AccesoDatos\\AccesoDatos\\precio.dat", "rw");
+			RandomAccessFile archivo = new RandomAccessFile("precio.dat", "rw");
 			
 			//Escribimos en el archivo
 			for (Producto p : lista.getProductos()) {
@@ -33,6 +32,8 @@ public class Ej2_EscribirRandomAccess {
 				archivo.writeDouble(p.getCoste());
 				archivo.writeInt(p.getDescuento());
 			}
+			
+			System.out.println("Fichero generado.");
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
